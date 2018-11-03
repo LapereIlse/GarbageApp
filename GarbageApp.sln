@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarbageApp", "GarbageApp\GarbageApp.csproj", "{DD200A39-830E-4CC5-A348-78E43D315ED1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarbageApp", "GarbageApp\GarbageApp.csproj", "{90E4C068-ED32-45C2-B713-39861B2291C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DD200A39-830E-4CC5-A348-78E43D315ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD200A39-830E-4CC5-A348-78E43D315ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD200A39-830E-4CC5-A348-78E43D315ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD200A39-830E-4CC5-A348-78E43D315ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90E4C068-ED32-45C2-B713-39861B2291C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E4C068-ED32-45C2-B713-39861B2291C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E4C068-ED32-45C2-B713-39861B2291C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E4C068-ED32-45C2-B713-39861B2291C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7313C3AF-0118-4C51-8E17-4602D6C65054}
+		SolutionGuid = {ABA237F3-8CEB-4AF9-82FA-4F6836DFB18F}
 	EndGlobalSection
 EndGlobal
