@@ -30,7 +30,7 @@ namespace GarbageApp
                     using (SqlCommand command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        string sql = "SELECT DISTINCT * FROM Garbage WHERE PersonId = @PersonId";
+                        string sql = "SELECT * FROM Garbage WHERE PersonId = @PersonId";
                         command.CommandText = sql;
                         command.Parameters.AddWithValue("@PersonId", PersonId);
 
