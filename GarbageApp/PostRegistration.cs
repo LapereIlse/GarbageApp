@@ -42,7 +42,9 @@ namespace GarbageApp
                     using (SqlCommand command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = "INSERT INTO Garbage VALUES (@GarbageId, @Description, @CategoryId, @Street, @CityId, @Amount, @Latitude, @Longitude, @PersonId, @Date);";
+
+                        string sql = "INSERT INTO Garbage VALUES (@GarbageId, @Description, @CategoryId, @Street, @CityId, @Amount, @Latitude, @Longitude, @PersonId, @Date);";
+                        command.CommandText = sql;
 
                         command.Parameters.AddWithValue("@GarbageId", registration.GarbageId);
                         command.Parameters.AddWithValue("@Description", registration.Description);

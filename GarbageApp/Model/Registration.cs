@@ -9,7 +9,7 @@ namespace GarbageApp.Model
         public Guid GarbageId { get; set; }
         public string Description { get; set; }
         public string Street { get; set; }
-        public string CategoryId { get; set; }
+        public Guid CategoryId { get; set; }
         public Guid CityId { get; set; }
         public int Amount { get; set; }
         public float Latitude { get; set; }
