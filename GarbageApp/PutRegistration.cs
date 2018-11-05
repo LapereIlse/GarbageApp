@@ -41,7 +41,7 @@ namespace GarbageApp
                     {
                         command.Connection = connection;
 
-                        string sql = "UPDATE Garbage SET Description = @Description, CategoryId = @CategoryId, Street = @Street, CityId = @CityId, Amount = @Amount, Latitude = @Latitude, Longitude = @Longitude, PersonId = @PersonId, Date = @Date;";
+                        string sql = "UPDATE Garbage SET Description = @Description, CategoryId = @CategoryId, Street = @Street, CityId = @CityId, Amount = @Amount, Latitude = @Latitude, Longitude = @Longitude, Name = @Name, Email = @Email, Date = @Date;";
                         command.CommandText = sql;
 
                         command.Parameters.AddWithValue("@GarbageId", registration.GarbageId);
@@ -52,7 +52,8 @@ namespace GarbageApp
                         command.Parameters.AddWithValue("@Amount", registration.Amount);
                         command.Parameters.AddWithValue("@Latitude", registration.Latitude);
                         command.Parameters.AddWithValue("@Longitude", registration.Longitude);
-                        command.Parameters.AddWithValue("@PersonId", registration.PersonId);
+                        command.Parameters.AddWithValue("@Name", registration.Name);
+                        command.Parameters.AddWithValue("@Email", registration.Email);
                         command.Parameters.AddWithValue("@Date", registration.Date);
 
                         await command.ExecuteNonQueryAsync();

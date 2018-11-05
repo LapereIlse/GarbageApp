@@ -43,7 +43,7 @@ namespace GarbageApp
                     {
                         command.Connection = connection;
 
-                        string sql = "INSERT INTO Garbage VALUES (@GarbageId, @Description, @CategoryId, @Street, @CityId, @Amount, @Latitude, @Longitude, @PersonId, @Date);";
+                        string sql = "INSERT INTO Garbage VALUES (@GarbageId, @Description, @CategoryId, @Street, @CityId, @Amount, @Latitude, @Longitude, @Name, @Email, @Date);";
                         command.CommandText = sql;
 
                         command.Parameters.AddWithValue("@GarbageId", registration.GarbageId);
@@ -54,7 +54,8 @@ namespace GarbageApp
                         command.Parameters.AddWithValue("@Amount", registration.Amount);
                         command.Parameters.AddWithValue("@Latitude", registration.Latitude);
                         command.Parameters.AddWithValue("@Longitude", registration.Longitude);
-                        command.Parameters.AddWithValue("@PersonId", registration.PersonId);
+                        command.Parameters.AddWithValue("@Name", registration.Name);
+                        command.Parameters.AddWithValue("@Email", registration.Email);
                         command.Parameters.AddWithValue("@Date", registration.Date);
 
                         await command.ExecuteNonQueryAsync();

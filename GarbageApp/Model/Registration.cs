@@ -14,7 +14,8 @@ namespace GarbageApp.Model
         public int Amount { get; set; }
         public float Latitude { get; set; }
         public float Longitude { get; set; }
-        public Guid PersonId { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
         public DateTime Date { get; set; }
     }
 }

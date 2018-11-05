@@ -17,7 +17,7 @@ namespace GarbageApp
     {
         [FunctionName("GetMyRegistrations")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "getmyregistrations/{personId}")] HttpRequest req, string PersonId,
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "getmyregistrations/{name}")] HttpRequest req, string name,
             ILogger log)
         {
             List<Registration> registrations = new List<Registration>();
@@ -30,9 +30,9 @@ namespace GarbageApp
                     using (SqlCommand command = new SqlCommand())
                     {
                         command.Connection = connection;
-                        string sql = "SELECT * FROM Garbage WHERE PersonId = @PersonId";
+                        string sql = "SELECT * FROM Garbage WHERE Name = @Name";
                         command.CommandText = sql;
-                        command.Parameters.AddWithValue("@PersonId", PersonId);
+                        command.Parameters.AddWithValue("@Name", name);
 
                         SqlDataReader reader = await command.ExecuteReaderAsync();
                         while (reader.Read())
@@ -47,7 +47,8 @@ namespace GarbageApp
                                 Amount = int.Parse(reader["Amount"].ToString()),
                                 Latitude = float.Parse(reader["Latitude"].ToString()),
                                 Longitude = float.Parse(reader["Longitude"].ToString()),
-                                PersonId = Guid.Parse(reader["PersonId"].ToString()),
+                                Name = reader["Name"].ToString(),
+                                Email = reader["Email"].ToString(),
                                 Date = DateTime.Parse(reader["Date"].ToString())
                             };
                             registrations.Add(registration);

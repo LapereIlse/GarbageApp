@@ -47,7 +47,8 @@ namespace GarbageApp
                                 Amount = int.Parse(reader["Amount"].ToString()),
                                 Latitude = float.Parse(reader["Latitude"].ToString()),
                                 Longitude = float.Parse(reader["Longitude"].ToString()),
-                                PersonId = Guid.Parse(reader["PersonId"].ToString()),
+                                Name = reader["Name"].ToString(),
+                                Email = reader["Email"].ToString(),
                                 Date = DateTime.Parse(reader["Date"].ToString())
                             };
                             registrations.Add(registration);
